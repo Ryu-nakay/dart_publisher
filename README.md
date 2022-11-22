@@ -11,29 +11,41 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+# dart_published
 
-## Features
+This package aims to reproduce Swift's @Published functionality.\
+This package was developed by a Japanese information science students. So please understand that the English in this document may be poor! \
+(Please point out any oddities. It's good study of English!)
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+## What this package can do
 
-## Getting started
+* Detecting changes in the value of a variable.
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+## Example
 
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+source
 
 ```dart
-const like = 'sample';
+void main(List<String> arguments) {
+  Publisher<int> a = Publisher<int>(1);
+
+  a.sink((newValue) {
+    print(newValue);
+  });
+
+  a.value = 2;
+
+  print("----");
+
+  a.value = 3;
+}
 ```
 
-## Additional information
+output
+```
+2
+----
+3
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+```
+
