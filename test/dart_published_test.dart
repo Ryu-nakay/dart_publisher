@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:dart_published/dart_published.dart';
+import 'package:dart_publisher/dart_publisher.dart';
 
 void main() {
   test('test', () {

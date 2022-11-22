@@ -11,7 +11,7 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
-# dart_published
+# dart_publisher
 
 This package aims to reproduce Swift's @Published functionality.\
 This package was developed by a Japanese information science students. So please understand that the English in this document may be poor! \
