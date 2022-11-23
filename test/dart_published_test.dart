@@ -2,7 +2,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:dart_publisher/dart_publisher.dart';
 
 void main() {
-  test('test', () {
+  test('sinkの挙動(値変更時)', () {
     List<int> eventValueList = [];
     int eventCount = 0;
 
@@ -25,5 +25,18 @@ void main() {
     expect(a.value, 3);
     expect(eventValueList, [2, 3]);
     expect(eventCount, 2);
+  });
+
+  test('Publisherの挙動(購読未設定時)', () {
+    List<int> eventValueList = [];
+    int eventCount = 0;
+
+    Publisher<int> a = Publisher<int>(1);
+
+    a.value = 2;
+    expect(a.value, 2);
+
+    a.value = 3;
+    expect(a.value, 3);
   });
 }
