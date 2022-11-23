@@ -1,4 +1,4 @@
-library dart_published;
+library dart_publisher;
 
 class Publisher<T> {
   // constructor
