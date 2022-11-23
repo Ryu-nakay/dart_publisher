@@ -1,7 +1,7 @@
 name: dart_publisher
 description: Detecting changes in the value of a variable.
 version: 0.0.3
-homepage:
+homepage: https://github.com/Ryu-nakay/dart_publisher
 
 environment:
   sdk: ">=2.18.4 <3.0.0"
